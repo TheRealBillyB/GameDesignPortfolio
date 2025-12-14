@@ -74,15 +74,11 @@ function switchTab(projectId) {
         content.classList.remove('active');
     });
 
-    // Add active class to selected tab based on projectId
-    const tabs = document.querySelectorAll('.art-tab');
-    tabs.forEach(tab => {
-        const tabText = tab.textContent.toLowerCase().replace(/\s+/g, '');
-        const projectName = 'project' + projectId.toLowerCase();
-        if (tabText === projectName) {
-            tab.classList.add('active');
-        }
-    });
+    // Add active class to selected tab using data attribute
+    const selectedTab = document.querySelector(`.art-tab[data-project="${projectId}"]`);
+    if (selectedTab) {
+        selectedTab.classList.add('active');
+    }
     
     // Add active class to selected content
     const selectedContent = document.getElementById(`${projectId}-art`);
