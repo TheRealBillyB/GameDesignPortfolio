@@ -159,6 +159,18 @@ body {
     transform: translateY(-2px);
 }
 
+.btn-tertiary {
+    background-color: transparent;
+    border-color: var(--accent-purple);
+    color: var(--accent-purple);
+}
+
+.btn-tertiary:hover {
+    background-color: rgba(168, 85, 247, 0.1);
+    box-shadow: 0 4px 15px rgba(168, 85, 247, 0.2);
+    transform: translateY(-2px);
+}
+
 .btn-small {
     padding: 0.625rem 1.25rem;
     font-size: 0.9rem;
@@ -277,11 +289,86 @@ body {
 }
 
 /* ===== CONCEPT ART SECTION ===== */
+.art-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 3rem;
+    flex-wrap: wrap;
+}
+
+.art-tab {
+    padding: 0.875rem 1.75rem;
+    background-color: var(--bg-card);
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    color: var(--text-secondary);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.art-tab:hover {
+    border-color: var(--accent-cyan);
+    color: var(--accent-cyan);
+}
+
+.art-tab.active {
+    background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+    color: var(--bg-primary);
+    border-color: transparent;
+}
+
+.art-content {
+    display: none;
+    animation: fadeIn 0.3s ease;
+}
+
+.art-content.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.art-project-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
 .concept-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1.5rem;
-    margin-top: 3rem;
+    margin-top: 2rem;
+}
+
+.concept-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.concept-image:hover {
+    transform: scale(1.05);
+    border-color: var(--accent-cyan);
+    box-shadow: 0 8px 20px rgba(0, 217, 255, 0.3);
 }
 
 .placeholder-text {

@@ -64,3 +64,27 @@ document.addEventListener('DOMContentLoaded', () => {
     updateActiveNavLink();
 });
 
+// Tab switching function for concept art section
+function switchTab(projectId) {
+    // Remove active class from all tabs and content
+    document.querySelectorAll('.art-tab').forEach(tab => {
+        tab.classList.remove('active');
+    });
+    document.querySelectorAll('.art-content').forEach(content => {
+        content.classList.remove('active');
+    });
+
+    // Add active class to selected tab and content
+    const selectedTab = Array.from(document.querySelectorAll('.art-tab')).find(
+        tab => tab.textContent.toLowerCase().includes(projectId.replace('forge', ' forge').replace('fall', ' fall').replace('fall', 'fall'))
+    );
+    if (selectedTab) {
+        selectedTab.classList.add('active');
+    }
+    
+    const selectedContent = document.getElementById(`${projectId}-art`);
+    if (selectedContent) {
+        selectedContent.classList.add('active');
+    }
+}
+

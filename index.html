@@ -57,6 +57,7 @@
                     <div class="card-buttons">
                         <a href="https://docs.google.com/document/d/1w6ONVaAXcs5z3oOEcaImv8UITaq_pvGxVGC4AbQwtAg/edit?usp=sharing" target="_blank" class="btn btn-small btn-primary">Full GDD (110 pages)</a>
                         <a href="https://docs.google.com/document/d/1bklkvv632JP9X24uqOSwlacf86i7XFf2LxcAnAwZG6g/edit?usp=sharing" target="_blank" class="btn btn-small btn-secondary">Executive Summary</a>
+                        <a href="#concept-art" class="btn btn-small btn-tertiary" onclick="switchTab('voxelforge')">View Concept Art</a>
                     </div>
                 </div>
 
@@ -77,6 +78,7 @@
                     <div class="card-buttons">
                         <a href="https://docs.google.com/document/d/1Psl8Wg8ufCDL70WSpx14MlKBAlsbqZfa5Ae2R4sCczk/edit?usp=sharing" target="_blank" class="btn btn-small btn-primary">Full GDD (70 pages)</a>
                         <a href="https://docs.google.com/document/d/1h92foxZDvWlUnOLddY1qt2rVfIeJ1shYYrecqYwBuYw/edit?usp=sharing" target="_blank" class="btn btn-small btn-secondary">Executive Summary</a>
+                        <a href="#concept-art" class="btn btn-small btn-tertiary" onclick="switchTab('domefall')">View Concept Art</a>
                     </div>
                 </div>
 
@@ -97,6 +99,7 @@
                     <div class="card-buttons">
                         <a href="https://docs.google.com/document/d/1mbeYUDIsmmt4oX_9ElogsK61vFqh75CNbvkdOXRJ7_k/edit?usp=sharing" target="_blank" class="btn btn-small btn-primary">Full GDD (43 pages)</a>
                         <a href="https://docs.google.com/document/d/1gnCfcq_bg6at2kim_bp9P5O_WN9leVBbU8zvGxT3P64/edit?usp=sharing" target="_blank" class="btn btn-small btn-secondary">Executive Summary</a>
+                        <a href="#concept-art" class="btn btn-small btn-tertiary" onclick="switchTab('starfall')">View Concept Art</a>
                     </div>
                 </div>
 
@@ -117,6 +120,7 @@
                     <div class="card-buttons">
                         <a href="https://docs.google.com/document/d/1gymZJEZUAaOcgjaBZMbbbX8-2ae7AJG6OpROOauPUew/edit?usp=sharing" target="_blank" class="btn btn-small btn-primary">Full GDD (32 pages)</a>
                         <a href="https://docs.google.com/document/d/1KIi2UBv2pPFDE30ApGBivSSDNrOLuLJQADFDLwtmIyg/edit?usp=sharing" target="_blank" class="btn btn-small btn-secondary">Executive Summary</a>
+                        <a href="#concept-art" class="btn btn-small btn-tertiary" onclick="switchTab('velocity')">View Concept Art</a>
                     </div>
                 </div>
             </div>
@@ -129,8 +133,48 @@
             <h2 class="section-title">Concept Art</h2>
             <p class="section-subtitle">AI-generated concept art and visual development</p>
             
-            <div class="concept-grid">
-                <p class="placeholder-text">Coming soon! Check back for concept art showcasing visual direction for each project.</p>
+            <!-- Project Tabs -->
+            <div class="art-tabs">
+                <button class="art-tab active" onclick="switchTab('voxelforge')">Project VoxelForge</button>
+                <button class="art-tab" onclick="switchTab('domefall')">Project DomeFall</button>
+                <button class="art-tab" onclick="switchTab('starfall')">Project Starfall</button>
+                <button class="art-tab" onclick="switchTab('velocity')">Project Velocity</button>
+            </div>
+
+            <!-- VoxelForge Art -->
+            <div id="voxelforge-art" class="art-content active">
+                <h3 class="art-project-title">Project VoxelForge</h3>
+                <div class="concept-grid">
+                    <p class="placeholder-text">Concept art coming soon! This section will showcase visual direction for the voxel sandbox.</p>
+                    <!-- Images will go here -->
+                </div>
+            </div>
+
+            <!-- DomeFall Art -->
+            <div id="domefall-art" class="art-content">
+                <h3 class="art-project-title">Project DomeFall</h3>
+                <div class="concept-grid">
+                    <p class="placeholder-text">Concept art coming soon! This section will showcase dinosaur designs and biodome environments.</p>
+                    <!-- Images will go here -->
+                </div>
+            </div>
+
+            <!-- Starfall Art -->
+            <div id="starfall-art" class="art-content">
+                <h3 class="art-project-title">Project Starfall</h3>
+                <div class="concept-grid">
+                    <p class="placeholder-text">Concept art coming soon! This section will showcase faction designs and sci-fi environments.</p>
+                    <!-- Images will go here -->
+                </div>
+            </div>
+
+            <!-- Velocity Art -->
+            <div id="velocity-art" class="art-content">
+                <h3 class="art-project-title">Project Velocity</h3>
+                <div class="concept-grid">
+                    <p class="placeholder-text">Concept art coming soon! This section will showcase ship designs and racing environments.</p>
+                    <!-- Images will go here -->
+                </div>
             </div>
         </div>
     </section>
@@ -141,7 +185,7 @@
             <h2 class="section-title">About Me</h2>
             <div class="about-content">
                 <p class="about-text">
-                    I'm a game designer passionate about creating deep, player-driven experiences. My work spans multiple genres, from voxel sandboxes to large-scale multiplayer shooters, always focusing on meaningful systems design and player agency.
+                    I'm a game designer and writer passionate about creating deep, player-driven experiences. My interests span multiple genres, from voxel sandboxes to large-scale multiplayer shooters, always focusing on meaningful systems design and player agency.
                 </p>
                 <p class="about-text">
                     What drives me is understanding the psychology behind game design. Why do players love grinding in one game but hate it in another? How do you balance challenge without frustration? I break down these questions through structured analysis and hands-on design work.
